@@ -1,5 +1,16 @@
 import cv2
-img = cv2.imread("sample2.png")
-print(img.shape)
-print(img.size)
-print(img.dtype)
+import time
+
+cam = cv2.VideoCapture(1)
+time.sleep(0.5)
+
+while True:
+    _,img = cam.read()
+
+    cv2.imshow("CameraFeed",img)
+    key = cv2.waitKey(1) & 0xFF
+    if key == ord("q"):
+        break
+
+cam.release()
+cv2.destroyAllWindows()
