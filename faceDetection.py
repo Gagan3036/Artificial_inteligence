@@ -2,7 +2,7 @@ import cv2
 import os
 
 dataset = "dataset"
-name = "champ"
+name = "Gagan"
 
 path = os.path.join(dataset,name)
 if not os.path.isdir(path):
@@ -13,7 +13,7 @@ alg = "haarcascade_frontalface_default.xml"
 
 haar_cascade = cv2.CascadeClassifier(alg)
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(1)
 
 count = 1
 while count < 31:
