@@ -1,7 +1,7 @@
 import cv2
 import time
 
-cam = cv2.VideoCapture(1)
+cam = cv2.VideoCapture(0)
 time.sleep(0.5)
 
 while True:
